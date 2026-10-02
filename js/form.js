@@ -1,25 +1,22 @@
-// Script pour la gestion du formulaire de contact
+// Formulaire de contact : envoi réel des messages par e-mail via Formspree.
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgavjwrq';
+
+// Adresse affichée si l'envoi échoue, et utilisée tant que Formspree n'est pas configuré
+const CONTACT_EMAIL = 'jeb.boufrour@gmail.com';
 
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', handleFormSubmit);
     }
-    
-    // Gestion des inputs du formulaire
-    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
-    
-    formInputs.forEach(input => {
-        // Ajout d'un effet visuel au focus
-        input.addEventListener('focus', () => {
-            input.parentElement.classList.add('focused');
-        });
-        
+
+    // Effets visuels et validation simple des champs
+    document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+        input.addEventListener('focus', () => input.parentElement.classList.add('focused'));
+
         input.addEventListener('blur', () => {
             input.parentElement.classList.remove('focused');
-            
-            // Validation simple
             if (input.value.trim() !== '') {
                 input.classList.add('valid');
                 input.classList.remove('invalid');
@@ -32,43 +29,65 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Gère la soumission du formulaire
+ * Valide le formulaire puis l'envoie à Formspree (ou ouvre la messagerie si Formspree n'est pas configuré).
  * @param {Event} e - L'événement de soumission
  */
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
     e.preventDefault();
-    
-    // Récupération des valeurs du formulaire
-    const formData = new FormData(e.target);
-    const formValues = Object.fromEntries(formData.entries());
-    
-    // Vérification que tous les champs requis sont remplis
-    const requiredFields = e.target.querySelectorAll('[required]');
+    const form = e.target;
+
+    // 1) Vérification des champs obligatoires
     let isValid = true;
-    
-    requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-            field.classList.add('invalid');
-            isValid = false;
-        } else {
-            field.classList.remove('invalid');
-        }
+    form.querySelectorAll('[required]').forEach(field => {
+        const ok = field.value.trim() !== '' && field.checkValidity();
+        field.classList.toggle('invalid', !ok);
+        if (!ok) isValid = false;
     });
-    
     if (!isValid) {
-        showFormMessage('Veuillez remplir tous les champs obligatoires.', 'error');
+        showFormMessage('Veuillez remplir correctement tous les champs obligatoires.', 'error');
         return;
     }
-    
-    // Simulation d'envoi du formulaire
-    // Dans un cas réel, vous utiliseriez fetch() ou axios pour envoyer les données à un backend
-    console.log('Données du formulaire:', formValues);
-    
-    // Affichage d'un message de succès
-    showFormMessage('Votre message a été envoyé avec succès !', 'success');
-    
-    // Réinitialisation du formulaire
-    e.target.reset();
+
+    const data = new FormData(form);
+    const button = form.querySelector('button[type="submit"]');
+
+    // 2) Solution de secours : tant que l'ID Formspree n'a pas été collé, on ouvre la messagerie du visiteur
+    if (FORMSPREE_ENDPOINT.includes('COLLE_ICI')) {
+        const body = `${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`;
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(data.get('subject'))}&body=${encodeURIComponent(body)}`;
+        showFormMessage(`Votre application de messagerie va s'ouvrir : il ne reste qu'à envoyer le message. Sinon, écrivez-moi à ${CONTACT_EMAIL}.`, 'success');
+        return;
+    }
+
+    // 3) Envoi réel : sujet de l'e-mail que tu recevras. L'adresse du champ "email" devient automatiquement l'adresse de réponse.
+    data.set('_subject', `Portfolio : ${data.get('subject')}`);
+
+    // On bloque le bouton pendant l'envoi pour éviter les doublons
+    button.disabled = true;
+    const originalLabel = button.textContent;
+    button.textContent = 'Envoi en cours...';
+
+    try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' }, // demande une réponse JSON au lieu d'une redirection
+            body: data
+        });
+
+        if (response.ok) {
+            showFormMessage('Merci ! Votre message a bien été envoyé, je vous réponds rapidement.', 'success');
+            form.reset();
+            form.querySelectorAll('.valid, .invalid').forEach(el => el.classList.remove('valid', 'invalid'));
+        } else {
+            throw new Error('Réponse ' + response.status);
+        }
+    } catch (error) {
+        // Le texte saisi est conservé, et l'adresse e-mail est affichée en alternative
+        showFormMessage(`L'envoi a échoué. Réessayez, ou écrivez-moi directement à ${CONTACT_EMAIL}.`, 'error');
+    } finally {
+        button.disabled = false;
+        button.textContent = originalLabel;
+    }
 }
 
 /**
@@ -77,42 +96,25 @@ function handleFormSubmit(e) {
  * @param {string} type - Le type de message ('success' ou 'error')
  */
 function showFormMessage(message, type) {
-    // Suppression d'un éventuel message précédent
     const existingMessage = document.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Création du nouvel élément de message
-    const messageElement = document.createElement('div');
-    messageElement.className = `form-message ${type}`;
-    messageElement.textContent = message;
-    
-    // Ajout de styles au message
-    messageElement.style.padding = '10px';
-    messageElement.style.marginTop = '15px';
-    messageElement.style.borderRadius = '5px';
-    messageElement.style.fontWeight = '500';
-    
-    if (type === 'success') {
-        messageElement.style.backgroundColor = '#d1e7dd';
-        messageElement.style.color = '#0a3622';
-    } else {
-        messageElement.style.backgroundColor = '#f8d7da';
-        messageElement.style.color = '#842029';
-    }
-    
-    // Ajout du message au formulaire
-    const form = document.getElementById('contactForm');
-    form.appendChild(messageElement);
-    
-    // Disparition automatique après 5 secondes
+    if (existingMessage) existingMessage.remove();
+
+    const el = document.createElement('div');
+    el.className = `form-message ${type}`;
+    el.textContent = message;
+    el.style.padding = '10px';
+    el.style.marginTop = '15px';
+    el.style.borderRadius = '5px';
+    el.style.fontWeight = '500';
+    el.style.backgroundColor = type === 'success' ? '#d1e7dd' : '#f8d7da';
+    el.style.color = type === 'success' ? '#0a3622' : '#842029';
+
+    document.getElementById('contactForm').appendChild(el);
+
+    // Disparition automatique après 8 secondes
     setTimeout(() => {
-        messageElement.style.opacity = '0';
-        messageElement.style.transition = 'opacity 0.5s ease';
-        
-        setTimeout(() => {
-            messageElement.remove();
-        }, 500);
-    }, 5000);
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => el.remove(), 500);
+    }, 8000);
 }
