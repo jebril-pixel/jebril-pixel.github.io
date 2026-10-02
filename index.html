@@ -56,12 +56,16 @@
         <div class="container">
             <div class="hero-content fade-in">
                 <h1 class="typing-effect">Jebril Boufrour</h1>
-                <p>Bonjour et bienvenue sur mon portfolio ! Je suis Jebril, développeur Full-Stack Java / React. Fort d'un BUT Informatique et d'un an d'expérience en production sur une application métier de santé, je conçois des applications robustes, du besoin utilisateur jusqu'à la mise en production. Basé à Paris, disponible immédiatement.</p>
+                <p>Bonjour et bienvenue sur mon portfolio ! Je suis Jebril, Développeur fullstack Java / React avec une première expérience en production sur une application métier utilisée quotidien
+nement par une équipe soignante. J’ai travaillé sur l’ensemble de la chaîne applicative : application mobile, API Spring Boot,
+données SQL et intégrations Microsoft, dans un environnement manipulant des données sensibles.
+Habitué à partir du besoin métier pour aller jusqu’aux évolutions en production, je souhaite aujourd’hui rejoindre une équipe où
+je peux apporter cette expérience tout en continuant à progresser sur le backend et les applications métier.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">Voir mes projets</a>
                     <a href="#contact" class="btn btn-outline">Me contacter</a>
                 </div>
-            </div>
+            </div>  
             <div class="hero-img">
                 <img src="assets/images/test2.png" alt="Jebril Boufrour">
             </div>
@@ -93,20 +97,20 @@
                     <div class="skills">
                         <h4>Mes compétences techniques</h4>
                         <div class="skill-tags">
-                            <span class="skill-tag"><i class="fab fa-cpp"></i> C++</span>
+                            
                             <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                           
                             <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
                             <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
                             <span class="skill-tag"><i class="fab fa-js"></i> TypeScript</span>
-                            <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
-                            <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+                            
+                            
                             <span class="skill-tag"><i class="fab fa-react"></i> React Native</span>
                             <span class="skill-tag"><i class="fab fa-node-js"></i> NestJS</span>
                             <span class="skill-tag"><i class="fab fa-java"></i> Spring Boot</span>
                             <span class="skill-tag"><i class="fas fa-network-wired"></i> Socket.io</span>
                             <span class="skill-tag"><i class="fab fa-angular"></i> Angular</span>
-                            <span class="skill-tag"><i class="fab fa-laravel"></i> Laravel</span>
+                            
                             <span class="skill-tag"><i class="fas fa-server"></i> API REST</span>
                             <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
                             <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
@@ -183,11 +187,13 @@
                     <div class="timeline-content fade-in">
                         <h3>Développeur Fullstack — Alternance puis CDD</h3>
                         <h4>Institut du Cancer Provence, Avignon</h4>
-                        <p class="timeline-date">Septembre 2024 - Août 2025</p>
-                        <p>Développement et évolution d'une application métier React Native utilisée quotidiennement par une équipe soignante, de l'analyse du besoin jusqu'à la mise en production</p>
-                        <p>API REST Java / Spring Boot et automatisation de flux de données (emails → JSON → base de données)</p>
-                        <p>Mise en place du SSO Microsoft Azure AD, synchronisation LDAP/Azure AD et intégration Microsoft Graph API</p>
-                        <p>Travail sur des données patients sensibles dans un cadre RGPD strict</p>
+                        <p class="timeline-date">Septembre 2024 - Déc 2025</p>
+                        <p>Application métier <strong>React Native (Expo) / Spring Boot</strong> utilisée quotidiennement par <strong>~15 soignants</strong>, de l'analyse du besoin aux évolutions en production : <strong>1 h gagnée par jour et par utilisateur</strong>.</p>
+                        <p>Conception du backend <strong>Spring Boot</strong> et d'<strong>API REST</strong> : gestion des données patients, automatisation de flux (emails → JSON → base de données)</p>
+                        <p><strong>SSO Microsoft Azure AD</strong>, synchronisation <strong>LDAP</strong> et intégration de <strong>Microsoft Graph API</strong> (données utilisateurs, événements d'agenda).</p>
+                        <p>Finalisation, maintenance et mise en production, avec la documentation nécessaire à la continuité du projet ; échanges avec l'équipe DSI, méthode <strong>Agile</strong>.</p>
+                        <p>Données patients sensibles, confidentialité et <strong>RGPD</strong>.</p>    
+                        <p>Usage de <strong>Claude Code</strong> pour accélérer le développement et la revue de code, en gardant la qualité et la compréhension du code produit.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -212,365 +218,269 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-<section id="projects" class="section">
-    <!-- Décoration d'arrière-plan -->
-    <div class="section-decoration bottom-left">
-        <i class="fas fa-paw"></i>
-    </div>
-    
-    <div class="container">
-        <div class="section-title">
-            <h2>Projets</h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Projet 1 -->
-            <div class="project-card fade-in" data-project="project1">
-                <div class="project-video">
-                    <video width="100%" controls>
-                        <source src="assets/images/media4.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
+<!-- Projets -->
+    <section id="projects" class="section">
+        <div class="section-decoration bottom-left"><i class="fas fa-paw"></i></div>
+        <div class="container">
+            <div class="section-title"><h2>Projets</h2></div>
+            <div class="projects-grid">
+
+                <!-- Projet 1 -->
+                <div class="project-card fade-in" data-project="project1">
+                    <div class="project-video">
+                        <!-- #t=0.1 affiche la 1re image sans télécharger toute la vidéo -->
+                        <video width="100%" controls playsinline preload="metadata"><source src="assets/images/media4.mp4#t=0.1" type="video/mp4"></video>
+                    </div>
+                    <div class="project-info">
+                        <h3>Téléconsultation médicale</h3>
+                        <p>Visioconférence médecin-patient en temps réel : flux vidéo P2P (WebRTC), signalisation Socket.io et API NestJS.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-node-js"></i> NestJS</span>
+                            <span><i class="fas fa-video"></i> WebRTC</span>
+                            <span><i class="fas fa-network-wired"></i> Socket.io</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                            <!-- Décommente quand le dépôt GitHub est public (remplace NOM-DU-DEPOT) :
+                            <a class="btn-link" href="https://github.com/jebril-pixel/NOM-DU-DEPOT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>Plateforme de téléconsultation médicale</h3>
-                    <p>Application de santé connectée permettant la visioconférence temps réel entre médecins et patients, avec une architecture NestJS scalable.</p>
-                    <div class="project-tech">
+
+                <!-- Projet 2 -->
+                <div class="project-card fade-in" data-project="project2">
+                    <div class="project-img portrait">
+                        <img src="assets/images/image.png" alt="Capture de la plateforme de jeux multijoueurs" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Plateforme de jeux multijoueurs</h3>
+                        <p>Jeux en temps réel (Morpion, Othello…) développés en équipe en Scrum : synchronisation des parties via Socket.io, sauvegarde et reprise en SQLite.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-network-wired"></i> Socket.io</span>
+                            <span><i class="fas fa-database"></i> SQLite</span>
+                            <span><i class="fab fa-docker"></i> Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                            <!-- <a class="btn-link" href="https://github.com/jebril-pixel/NOM-DU-DEPOT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card fade-in" data-project="project3">
+                    <div class="project-video">
+                        <video width="100%" controls playsinline preload="metadata"><source src="assets/images/Média3.mp4#t=0.1" type="video/mp4"></video>
+                    </div>
+                    <div class="project-info">
+                        <h3>Explorateur 3D des armes de VALORANT</h3>
+                        <p>Application web interactive : modèles 3D des armes du jeu, alimentés par l'API de VALORANT.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-cube"></i> Three.js</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                            <!-- <a class="btn-link" href="https://github.com/jebril-pixel/NOM-DU-DEPOT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card fade-in" data-project="project4">
+                    <div class="project-video">
+                        <video width="100%" controls playsinline preload="metadata"><source src="assets/images/Média2.mp4#t=0.1" type="video/mp4"></video>
+                    </div>
+                    <div class="project-info">
+                        <h3>Temps de route</h3>
+                        <p>Application desktop C++ / Qt de calcul d'itinéraire entre villes avec les algorithmes de plus court chemin Dijkstra et A*.</p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-cpp"></i> C++</span>
+                            <span><i class="fas fa-window-maximize"></i> Qt</span>
+                            <span><i class="fab fa-git-alt"></i> Git</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                            <!-- <a class="btn-link" href="https://github.com/jebril-pixel/NOM-DU-DEPOT" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fenêtres de détail (sans lecture automatique des vidéos) -->
+    <div class="project-modal" id="modal-project1">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-media">
+                    <video width="100%" controls playsinline preload="metadata"><source src="assets/images/media4.mp4#t=0.1" type="video/mp4"></video>
+                </div>
+                <div class="modal-details">
+                    <h2>Téléconsultation médicale</h2>
+                    <div class="modal-tech">
                         <span><i class="fab fa-react"></i> React</span>
                         <span><i class="fab fa-node-js"></i> NestJS</span>
+                        <span><i class="fas fa-video"></i> WebRTC</span>
                         <span><i class="fas fa-network-wired"></i> Socket.io</span>
-                        <span><i class="fas fa-database"></i> Postgres</span>
-                        <span><i class="fas fa-server"></i> API REST</span>
+                        <span><i class="fas fa-database"></i> PostgreSQL</span>
                         <span><i class="fab fa-docker"></i> Docker</span>
                     </div>
-                    <div class="project-links">
-                        <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                    <div class="modal-description">
+                        <h3>Le projet</h3>
+                        <p>Projet personnel, construit en écho à mon expérience dans le secteur de la santé : permettre à un patient et à un médecin de se retrouver en visioconférence en temps réel.</p>
+                        <h3>Ce que j'ai fait</h3>
+                        <ul>
+                            <li>Visioconférence en temps réel en P2P avec WebRTC, signalisation via Socket.io</li>
+                            <li>API REST NestJS sécurisée, données persistées dans PostgreSQL</li>
+                            <li>Interface React adaptée aux professionnels de santé, utilisable sur tous les appareils</li>
+                        </ul>
+                        <h3>Point technique</h3>
+                        <p>Obtenir une communication vidéo fluide et sécurisée, en gardant en tête la confidentialité attendue pour des échanges médicaux.</p>
+                        <h3>Mon rôle</h3>
+                        <p>Développement full-stack : interface React, API NestJS et mise en place de la visioconférence.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Projet 2 -->
-            <div class="project-card fade-in" data-project="project2">
-                <div class="project-video">
-                    <video width="100%" controls>
-                        <source src="assets/images/Média2.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
+    <div class="project-modal" id="modal-project2">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-media">
+                    <img src="assets/images/image.png" alt="Capture de la plateforme de jeux multijoueurs" loading="lazy">
                 </div>
-                <div class="project-info">
-                    <h3>Temps de route</h3>
-                    <p>Application desktop de calcul d'itinéraire entre villes, avec algorithmes de plus court chemin (Dijkstra, A*).</p>
-                    <div class="project-tech">
-                        <span><i class="fab fa-cpp"></i> C++</span>
-                        <span><i class="fas fa-window-maximize"></i> QTCreator</span>
-                        <span><i class="fas fa-paint-brush"></i> UI/UX</span>
-                        <span><i class="fab fa-git-alt"></i> Git</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projet 3 -->
-            <div class="project-card fade-in" data-project="project3">
-                <div class="project-img portrait">
-                    <img src="assets/images/image.png" alt="Projet 3">
-                </div>
-                <div class="project-info">
-                    <h3>Plateforme de jeux-vidéos</h3>
-                    <p>Espace collaboratif web temps réel : authentification, chat instantané et synchronisation d'état multijoueur via Socket.io.</p>
-                    <div class="project-tech">
+                <div class="modal-details">
+                    <h2>Plateforme de jeux multijoueurs</h2>
+                    <div class="modal-tech">
                         <span><i class="fab fa-js"></i> JavaScript</span>
                         <span><i class="fas fa-network-wired"></i> Socket.io</span>
                         <span><i class="fas fa-database"></i> SQLite</span>
                         <span><i class="fab fa-docker"></i> Docker</span>
                     </div>
-                    <div class="project-links">
-                        <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
+                    <div class="modal-description">
+                        <h3>Le projet</h3>
+                        <p>Espace collaboratif web proposant des jeux multijoueurs (Morpion, Othello…), développé en équipe en méthode Agile Scrum.</p>
+                        <h3>Ce que j'ai fait</h3>
+                        <ul>
+                            <li>Synchronisation bidirectionnelle des parties en temps réel avec Socket.io</li>
+                            <li>Sauvegarde et reprise des parties en SQLite</li>
+                            <li>Authentification, profils et chat pendant les parties</li>
+                            <li>Déploiement conteneurisé avec Docker</li>
+                        </ul>
+                        <h3>Point technique</h3>
+                        <p>Garder l'état d'une partie identique chez tous les joueurs, en temps réel.</p>
+                        <h3>Mon rôle</h3>
+                        <p>Développement front-end et back-end des jeux de la plateforme, au sein d'une équipe.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Projet 4 -->
-            <div class="project-card fade-in" data-project="project4">
-                <div class="project-video">
-                    <video width="100%" controls>
-                        <source src="assets/images/Média3.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture de vidéos.
-                    </video>
+    <div class="project-modal" id="modal-project3">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-media">
+                    <video width="100%" controls playsinline preload="metadata"><source src="assets/images/Média3.mp4#t=0.1" type="video/mp4"></video>
                 </div>
-                <div class="project-info">
-                    <h3>Application Intéractive web en JavaScript</h3>
-                    <p>Afficher et explorer dynamiquement les détails des armes d'un jeu à l'aide d'une API.</p>
-                    <div class="project-tech">
+                <div class="modal-details">
+                    <h2>Explorateur 3D des armes de VALORANT</h2>
+                    <div class="modal-tech">
                         <span><i class="fab fa-js"></i> JavaScript</span>
-                        <span><i class="fas fa-cube"></i> ThreeJs</span>
+                        <span><i class="fas fa-cube"></i> Three.js</span>
                     </div>
-                    <div class="project-links">
-                        <button class="btn-details">Voir plus <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Modals de projets -->
-<div class="project-modal" id="modal-project1">
-    <div class="modal-overlay"></div>
-    <div class="modal-container">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-        <div class="modal-content">
-            <div class="modal-media">
-                <video width="100%" controls autoplay>
-                    <source src="assets/images/media4.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-            </div>
-            <div class="modal-details">
-                <h2>Plateforme de téléconsultation médicale</h2>
-                <div class="modal-tech">
-                    <span><i class="fab fa-react"></i> React</span>
-                    <span><i class="fab fa-node-js"></i> NestJS</span>
-                    <span><i class="fas fa-network-wired"></i> Socket.io</span>
-                    <span><i class="fas fa-database"></i> Postgres</span>
-                    <span><i class="fas fa-server"></i> API REST</span>
-                    <span><i class="fab fa-docker"></i> Docker</span>
-                </div>
-                <div class="modal-description">
-                    <h3>Description du projet</h3>
-                    <p>Application de santé connectée permettant aux patients de consulter des médecins à distance via des sessions vidéo en temps réel.</p>
-                    <p>Projet personnel, construit en écho à mon expérience professionnelle dans le secteur de la santé, avec un focus sur la sécurité des données et la gestion de la latence.</p>
-                    
-                    <h3>Fonctionnalités principales</h3>
-                    <ul>
-                        <li>Vidéoconférence en temps réel entre médecins et patients</li>
-                        <li>Système de prise de rendez-vous intégré</li>
-                        <li>Interface adaptée aux professionnels de santé</li>
-                        <li>Application responsive accessible sur tous les appareils</li>
-                    </ul>
-                    
-                    <h3>Défis techniques</h3>
-                    <p>La principale difficulté de ce projet était d'assurer une communication vidéo fluide et sécurisée, tout en respectant les normes strictes de confidentialité des données médicales. L'utilisation de Socket.io et WebRTC a permis d'établir des connexions P2P robustes, tandis que l'architecture backend NestJS offre la sécurité et la scalabilité nécessaires.</p>
-                    
-                    <h3>Mon rôle</h3>
-                    <p>J'ai été responsable du développement full-stack de l'application, de la conception de l'interface utilisateur à l'implémentation des API REST et la configuration du système de streaming vidéo.</p>
-                    <div class="modal-competences">
-                        <h3>Compétences professionnelles mobilisées</h3>
-                        <div class="competence-tags">
-                            <span class="competence-tag"><i class="fas fa-laptop-code"></i> Développement full-stack</span>
-                            <span class="competence-tag"><i class="fas fa-tachometer-alt"></i> Optimisation</span>
-                            <span class="competence-tag"><i class="fas fa-network-wired"></i> Intégration systèmes</span>
-                            <span class="competence-tag"><i class="fas fa-database"></i> Modélisation de données</span>
-                            <span class="competence-tag"><i class="fas fa-tasks"></i> Gestion de projet</span>
-                        </div>
+                    <div class="modal-description">
+                        <h3>Le projet</h3>
+                        <p>Application web interactive pour explorer les armes du jeu VALORANT en 3D, avec les données de l'API du jeu.</p>
+                        <h3>Ce que j'ai fait</h3>
+                        <ul>
+                            <li>Récupération des données des armes via l'API de VALORANT</li>
+                            <li>Modèles 3D que l'on peut faire pivoter et zoomer avec Three.js</li>
+                            <li>Interface responsive</li>
+                        </ul>
+                        <h3>Point technique</h3>
+                        <p>Afficher des modèles 3D fluides dans le navigateur : optimisation des modèles et des textures pour garder des temps de chargement courts.</p>
+                        <h3>Mon rôle</h3>
+                        <p>Conception de l'interface et développement complet du front-end.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="project-modal" id="modal-project2">
-    <div class="modal-overlay"></div>
-    <div class="modal-container">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-        <div class="modal-content">
-            <div class="modal-media">
-                <video width="100%" controls autoplay>
-                    <source src="assets/images/Média2.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-            </div>
-            <div class="modal-details">
-                <h2>Temps de route</h2>
-                <div class="modal-tech">
-                    <span><i class="fab fa-cpp"></i> C++</span>
-                    <span><i class="fas fa-window-maximize"></i> QTCreator</span>
-                    <span><i class="fas fa-paint-brush"></i> UI/UX</span>
-                    <span><i class="fab fa-git-alt"></i> Git</span>
+    <div class="project-modal" id="modal-project4">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-media">
+                    <video width="100%" controls playsinline preload="metadata"><source src="assets/images/Média2.mp4#t=0.1" type="video/mp4"></video>
                 </div>
-                <div class="modal-description">
-                    <h3>Description du projet</h3>
-                    <p>Cette application de bureau développée en C++ avec QTCreator permet de calculer le temps de route entre différentes villes sélectionnées.</p>
-                    
-                    <h3>Fonctionnalités principales</h3>
-                    <ul>
-                        <li>Interface graphique intuitive pour la sélection des villes</li>
-                        <li>Algorithme de calcul d'itinéraire optimisé</li>
-                        <li>Visualisation des trajets sur une carte interactive</li>
-                        <li>Estimation des temps de trajet en fonction du trafic</li>
-                    </ul>
-                    
-                    <h3>Défis techniques</h3>
-                    <p>Le défi majeur de ce projet était l'implémentation efficace des algorithmes de recherche du plus court chemin (Dijkstra et A*) pour calculer les itinéraires optimaux entre les villes.</p>
-                    
-                    <h3>Mon rôle</h3>
-                    <p>J'ai conçu et développé l'application complète, de la mise en place de l'interface utilisateur avec Qt à l'implémentation des algorithmes d'optimisation d'itinéraire en C++. Ce projet m'a permis d'approfondir mes connaissances en programmation orientée objet et en développement d'interfaces graphiques.</p>
-                    <div class="modal-competences">
-                        <h3>Compétences professionnelles mobilisées</h3>
-                        <div class="competence-tags">
-                            <span class="competence-tag"><i class="fas fa-laptop-code"></i> Développement full-stack</span>
-                            <span class="competence-tag"><i class="fas fa-tachometer-alt"></i> Optimisation</span>
-                            <span class="competence-tag"><i class="fas fa-tasks"></i> Gestion de projet</span>
-                        </div>
+                <div class="modal-details">
+                    <h2>Temps de route</h2>
+                    <div class="modal-tech">
+                        <span><i class="fab fa-cpp"></i> C++</span>
+                        <span><i class="fas fa-window-maximize"></i> Qt</span>
+                        <span><i class="fab fa-git-alt"></i> Git</span>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Le projet</h3>
+                        <p>Application de bureau en C++ avec Qt pour calculer le temps de route entre des villes sélectionnées.</p>
+                        <h3>Ce que j'ai fait</h3>
+                        <ul>
+                            <li>Interface graphique Qt pour choisir les villes</li>
+                            <li>Implémentation de Dijkstra et A* pour trouver l'itinéraire optimal</li>
+                        </ul>
+                        <h3>Point technique</h3>
+                        <p>Implémenter efficacement les algorithmes de plus court chemin.</p>
+                        <h3>Mon rôle</h3>
+                        <p>Conception et développement complets, de l'interface Qt aux algorithmes en C++ (programmation orientée objet).</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="project-modal" id="modal-project3">
-    <div class="modal-overlay"></div>
-    <div class="modal-container">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-        <div class="modal-content">
-            <div class="modal-media">
-                <img src="assets/images/image.png" alt="Plateforme de jeux-vidéos">
-            </div>
-            <div class="modal-details">
-                <h2>Plateforme de jeux-vidéos</h2>
-                <div class="modal-tech">
-                    <span><i class="fab fa-js"></i> JavaScript</span>
-                    <span><i class="fas fa-network-wired"></i> Socket.io</span>
-                    <span><i class="fas fa-database"></i> SQLite</span>
-                    <span><i class="fab fa-docker"></i> Docker</span>
-                </div>
-                <div class="modal-description">
-                    <h3>Description du projet</h3>
-                    <p>Espace collaboratif web offrant des jeux multijoueurs (Morpion, Reversi...) en temps réel, développé en équipe selon la méthode Agile Scrum.</p>
-                    
-                    <h3>Fonctionnalités principales</h3>
-                    <ul>
-                        <li>Collection de jeux éducatifs multijoueurs accessibles directement depuis le navigateur</li>
-                        <li>Communication en temps réel via le chat pendant les parties</li>
-                        <li>Système d'authentification et de profils personnalisés</li>
-                    </ul>
-                    
-                    <h3>Défis techniques</h3>
-                    <p>La synchronisation en temps réel des jeux multijoueurs. Grâce à Socket.io, on a pu implémenter une communication bidirectionnelle instantanée entre les joueurs. L'utilisation de Docker a facilité le déploiement et l'évolutivité de la plateforme.</p>
-                    
-                    <h3>Mon rôle</h3>
-                    <p>J'ai été responsable du développement front-end et back-end des jeux de la plateforme. Ce projet m'a permis d'approfondir mes connaissances en développement web temps réel et en conception de jeux vidéos.</p>
-                    <div class="modal-competences">
-                        <h3>Compétences professionnelles mobilisées</h3>
-                        <div class="competence-tags">
-                            <span class="competence-tag"><i class="fas fa-laptop-code"></i> Développement full-stack</span>
-                            <span class="competence-tag"><i class="fas fa-network-wired"></i> Intégration systèmes</span>
-                            <span class="competence-tag"><i class="fas fa-database"></i> Modélisation de données</span>
-                            <span class="competence-tag"><i class="fas fa-users"></i> Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="project-modal" id="modal-project4">
-    <div class="modal-overlay"></div>
-    <div class="modal-container">
-        <button class="modal-close"><i class="fas fa-times"></i></button>
-        <div class="modal-content">
-            <div class="modal-media">
-                <video width="100%" controls autoplay>
-                    <source src="assets/images/Média3.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                </video>
-            </div>
-            <div class="modal-details">
-                <h2>Application Interactive web en JavaScript</h2>
-                <div class="modal-tech">
-                    <span><i class="fab fa-js"></i> JavaScript</span>
-                    <span><i class="fas fa-cube"></i> ThreeJs</span>
-                </div>
-                <div class="modal-description">
-                    <h3>Description du projet</h3>
-                    <p>Cette application web interactive permet d'explorer en détail les armes du jeu VALORANT, avec des visualisations 3D. Le projet utilise l'API de VALORANT pour récupérer les données et ThreeJS pour les visualisations 3D.</p>
-                    
-                    <h3>Fonctionnalités principales</h3>
-                    <ul>
-                        <li>Modèles 3D interactifs des armes que l'utilisateur peut faire pivoter et zoomer</li>
-                        <li>Animations et effets visuels pour une expérience utilisateur immersive</li>
-                        <li>Interface responsive adaptée à tous les appareils</li>
-                    </ul>
-                    
-                    <h3>Défis techniques</h3>
-                    <p>L'intégration de ThreeJS pour afficher des modèles 3D performants dans un navigateur était le principal défi technique. J'ai dû optimiser les modèles et les textures pour garantir des temps de chargement rapides, tout en maintenant une qualité visuelle élevée. La gestion des interactions utilisateur avec les modèles 3D a également nécessité une attention particulière.</p>
-                    
-                    <h3>Mon rôle</h3>
-                    <p>J'ai conçu l'interface utilisateur et développé l'intégralité de l'application front-end, en me concentrant particulièrement sur l'optimisation des performances,l'expérience utilisateur et surtout le design de l'inteface. Ce projet m'a permis d'approfondir mes compétences en JavaScript, en visualisation de données et en programmation 3D pour le web.</p>
-                    <div class="modal-competences">
-                        <h3>Compétences professionnelles mobilisées</h3>
-                        <div class="competence-tags">
-                            <span class="competence-tag"><i class="fas fa-laptop-code"></i> Développement full-stack</span>
-                            <span class="competence-tag"><i class="fas fa-tachometer-alt"></i> Optimisation</span>
-                            <span class="competence-tag"><i class="fas fa-server"></i> Intégration systèmes</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section">
-        <!-- Décoration d'arrière-plan -->
-        <div class="section-decoration top-right">
-            <i class="fas fa-at"></i>
-        </div>
-        
+        <div class="section-decoration top-right"><i class="fas fa-at"></i></div>
         <div class="container">
-            <div class="section-title">
-                <h2>Contact</h2>
-            </div>
+            <div class="section-title"><h2>Contact</h2></div>
             <div class="contact-content">
                 <div class="contact-info fade-in">
                     <h3>Contactez-moi</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>jeb.boufrour@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>06 27 51 19 38</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Paris</span>
-                    </div>
-                    
-                </div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:jeb.boufrour@gmail.com">jeb.boufrour@gmail.com</a></div>
+                    <div class="contact-item"><i class="fas fa-phone"></i><a href="tel:+33627511938">06 27 51 19 38</a></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Paris / Nantes</span></div>
+                   
                 <div class="contact-form fade-in">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
+                    <form id="contactForm" novalidate>
+                        <!-- Anti-spam : champ invisible, les robots le remplissent, pas les humains -->
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+                        <div class="form-group"><label for="name">Nom</label><input type="text" id="name" name="name" required></div>
+                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                        <div class="form-group"><label for="subject">Sujet</label><input type="text" id="subject" name="subject" required></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
                         <button type="submit" class="btn">Envoyer</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+ 
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -582,18 +492,17 @@
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <!-- Décommente et mets tes vrais liens (l'ancien lien "#" ne menait nulle part) :
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <p class="copyright">© 2025 Jebril Boufrour. Tous droits réservés.</p>
+                    <a href="https://www.linkedin.com/in/TON-PROFIL" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/TON-PSEUDO" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div> -->
+                <p class="copyright">© 2026 Jebril Boufrour. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Icône chat flottante pour remonter en haut -->
-    <div class="floating-cat" id="scrollTopCat">
-        <i class="fas fa-cat"></i>
-    </div>
+ 
+    <div class="floating-cat" id="scrollTopCat"><i class="fas fa-cat"></i></div>
 
     <!-- Scripts JS -->
     <script src="js/main.js"></script>
